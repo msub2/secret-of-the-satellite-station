@@ -1,4 +1,5 @@
 import Button from "../entities/Button";
+import Player from "../entities/Player";
 
 AFRAME.registerSystem('game', {
     schema: {},
@@ -12,6 +13,8 @@ AFRAME.registerSystem('game', {
            height: 2,
            depth: 2
         });
+
+        this.player = new Player();
     },
 
     tick(time, timeDelta){
