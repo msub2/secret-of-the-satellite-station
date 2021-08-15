@@ -1,4 +1,4 @@
-import {Box} from "../entities/Box";
+import Button from "../entities/Button";
 
 AFRAME.registerSystem('game', {
     schema: {},
@@ -7,7 +7,7 @@ AFRAME.registerSystem('game', {
         console.log('Game Initialized');
 
         // Example summon a custom entity
-        this.box = new Box(0, 2, -5, {
+        this.button = new Button(0, 2, -5, {
            width: 2,
            height: 2,
            depth: 2
@@ -16,6 +16,6 @@ AFRAME.registerSystem('game', {
 
     tick(time, timeDelta){
         // Your gameloop code
-        this.box.update(time, timeDelta);
+        
     }
 });
