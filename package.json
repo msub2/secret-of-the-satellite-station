@@ -1,13 +1,13 @@
 {
-  "author": "Marc Guinea Casas <develop.marcguinea@gmail.com>",
-  "name": "js13k-aframe-boilerplate",
+  "author": "Daniel Adams <msub2official@gmail.com>",
+  "name": "secret-of-the-satellite-station",
   "version": "1.0.0",
-  "description": "An A-Frame boilerplate for the js13k competition.",
+  "description": "Entry for the js13k 2021 competition.",
   "license": "MIT",
-  "homepage": "https://github.com/mguinea/js13k-aframe-boilerplate#readme",
+  "homepage": "https://github.com/msub2/secret-of-the-satellite-station#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mguinea/js13k-aframe-boilerplate.git"
+    "url": "git+https://github.com/msub2/secret-of-the-satellite-station.git"
   },
   "main": "src/main.js",
   "scripts": {
