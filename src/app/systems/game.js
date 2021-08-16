@@ -1,3 +1,4 @@
+import Starfield from "../components/starfield";
 import Button from "../entities/Button";
 import Player from "../entities/Player";
 
@@ -6,6 +7,8 @@ AFRAME.registerSystem('game', {
 
     init: function () {
         console.log('Game Initialized');
+
+        this.starfield = new Starfield();        
 
         // Example summon a custom entity
         this.button = new Button(0, 2, -5, {
