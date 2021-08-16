@@ -1,5 +1,5 @@
 /**
- * Stripped down version of Dave Kerr's "Learn JavaScript: Part 1 - Create a Starfield" project licensed under the CPOL.
+ * Modified version of Dave Kerr's "Learn JavaScript: Part 1 - Create a Starfield" project licensed under the CPOL.
  * https://www.codeproject.com/info/cpol10.aspx
  */
 export default class Starfield {
@@ -35,10 +35,14 @@ export default class Starfield {
         let img = document.createElement('img');
         img.src = this.canvas.toDataURL();
 
-        const starSky = document.createElement('a-sky');
-        starSky.setAttribute('src', img.src);
-        starSky.setAttribute('radius', 1000)
-        document.querySelector('a-scene').appendChild(starSky);
+        this.starSky = document.createElement('a-sky');
+        this.starSky.setAttribute('src', img.src);
+        this.starSky.setAttribute('radius', 1000)
+        document.querySelector('a-scene').appendChild(this.starSky);
+    }
+
+    spin() {
+        this.starSky.object3D.rotateY(.0005);
     }
 }
 

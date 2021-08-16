@@ -22,6 +22,6 @@ AFRAME.registerSystem('game', {
 
     tick(time, timeDelta){
         // Your gameloop code
-        
+        this.starfield.spin();
     }
 });
