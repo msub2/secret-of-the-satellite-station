@@ -11,7 +11,7 @@
   },
   "main": "src/main.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "postbuild": "node postbuild.js"
   },
@@ -19,12 +19,13 @@
     "archiver": "^2.1.1",
     "css-loader": "^1.0.0",
     "html-webpack-inline-source-plugin": "0.0.10",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^0.4.1",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "react-dev-utils": "^11.0.4",
     "style-loader": "^0.22.1",
-    "webpack": "^4.17.0",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }

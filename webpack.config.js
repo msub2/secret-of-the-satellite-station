@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const isProduction = process.env.npm_lifecycle_event === 'build';
@@ -31,7 +31,7 @@ module.exports = {
       },
       inlineSource: isProduction && '\.(js|css)$'
     }),
-    new HtmlWebpackInlineSourcePlugin(),
+    new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime/]),
     new OptimizeCssAssetsPlugin({}),
     new MiniCssExtractPlugin({
       filename: '[name].css'

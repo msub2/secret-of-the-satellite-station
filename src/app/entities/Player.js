@@ -13,6 +13,11 @@ export default class Player {
             hand.setAttribute('daydream-controls', { hand: handedness });
             hand.setAttribute('hand-tracking-controls', { hand: handedness });
             this.scene.appendChild(hand);
+
+            document.addEventListener('model-loaded', () => {
+                if (!hand.getObject3D('mesh')) return;
+                hand['bbox'] = new THREE.Box3().setFromObject(hand.getObject3D('mesh'));
+            });
         });
     }
 }
