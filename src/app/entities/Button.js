@@ -35,7 +35,6 @@ export default class Button extends Interactable {
         this.el.className = 'button';
 
         this.scene.appendChild(this.el);
-        console.log(this.el.components.geometry?.geometry);
     }
 
     interact() {
@@ -44,8 +43,10 @@ export default class Button extends Interactable {
     }
 
     checkCollisions(left, right) {
-        if (left.bbox) {
-            console.log(left.bbox.intersectsBox(this.el.components.geometry.geometry.boundingBox));
-        }
+        if (!left.bbox || !this.el.components.geometry?.geometry) return;
+        
+        //console.log(this.el.components.geometry.geometry.boundingBox.intersectsBox(left.bbox));
+        //console.log(left.bbox);
+        //console.log(this.el.components.geometry.geometry.boundingBox)
     }
 }
