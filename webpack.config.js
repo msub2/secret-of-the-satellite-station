@@ -31,7 +31,7 @@ module.exports = {
       },
       inlineSource: isProduction && '\.(js|css)$'
     }),
-    new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime/]),
+    new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/main/]),
     new OptimizeCssAssetsPlugin({}),
     new MiniCssExtractPlugin({
       filename: '[name].css'

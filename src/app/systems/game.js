@@ -25,7 +25,7 @@ AFRAME.registerSystem('game', {
     tick(time, timeDelta){
         // Your gameloop code
         this.starfield.spin();
-        this.player.updateHandBBoxes();
+        this.player.update();
         this.button.checkCollisions(this.player.leftHand, this.player.rightHand);
     }
 });
