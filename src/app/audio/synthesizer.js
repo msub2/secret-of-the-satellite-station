@@ -16,6 +16,7 @@ const NOTES = {
     'A#1': 58.270470189761239,
     'B1': 61.735412657015513,
 
+    "C2": 65.406391325149658,
     "C#2": 69.295657744218024,
     "D2": 73.416191979351890,
     "D#2": 77.781745930520227,
@@ -93,4 +94,26 @@ const NOTES = {
     "B7": 3951.066410048992894,
     
     "C8": 4186.009044809578154,
+}
+
+let customWaveform = null;
+let sineTerms = null;
+let cosineTerms = null;
+
+
+export default class Synthesizer {
+    constructor(ctx) {
+        this.osc = ctx.createOscillator();
+        this.osc.type = 'sine';
+        this.osc.frequency.value = NOTES['C2'];
+        this.osc.connect(ctx.destination);
+    }
+
+    start() {
+        this.osc.start();
+    }
+
+    stop() {
+        this.osc.stop();
+    }
 }
